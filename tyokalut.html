@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Työkalut</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <header>
+        <h1>Työkalut</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Etusivu</a></li>
+                <li><a href="perusteet.html">Pyöränhuollon perusteet</a></li>
+                <li><a href="oppaat.html">Huolto-oppaat</a></li>
+                <li><a href="tyokalut.html">Työkalut</a></li>
+                <li><a href="huoltopaivakirja.html">Huoltopäiväkirja</a></li>
+                <li><a href="huoltoliikkeet.html">Huoltoliikkeet</a></li>
+                <li><a href="pyorailyvinkit.html">Pyöräilyvinkit</a></li>
+                <li><a href="yhteiso.html">Yhteisö</a></li>
+            </ul>
+            <input type="text" id="searchbox" placeholder="Hae ongelma">
+            <div id="searchresults"></div>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h3>Yleiset</h3><br>
+            <label>
+                <input type="checkbox" id="tk1"data-persist>
+                Kuusiokoloavain
+            </label><br>
+            <label>
+                <input type="checkbox" id="tk2" data-persist>
+                Ruuvimeisselisarja (philips ja talttapää)
+            </label><br>
+            <label>
+                <input type="checkbox" id="tk3"data-persist>
+                Kiintoavainsarja
+            </label><br>
+            <label>
+                <input type="checkbox" id="tk4"data-persist>
+                Jakoavain
+            </label><br><br>
+            <h3>Rengashuolto</h3><br>
+            <label>
+                <input type="checkbox" id="tk5"data-persist>
+                Rengasvipu
+            </label><br>
+            <label>
+                <input type="checkbox" id="tk6"data-persist>
+                Paikkaussarja
+            </label><br>
+            <label>
+                <input type="checkbox" id="tk7"data-persist>
+                Pumppu
+            </label><br>
+            <label>
+                <input type="checkbox" id="tk8"data-persist>
+                Uusi sisäkumi
+            </label><br><br>
+            <h3>Ketjun huolto</h3>
+            <h4>Hätätilanteeseen</h4>
+            <label>
+                <input type="checkbox" id="tk9"data-persist>
+                Ketjupihdit
+            </label><br>
+            <label>
+                <input type="checkbox" id="tk10"data-persist>
+                Jousi tai Niittiketjulukko
+            </label><br>
+            <h4>Kotihuolto</h4>
+            <label>
+                <input type="checkbox" id="tk11"data-persist>
+                Lukkorengaspihdit
+            </label><br>
+            <label>
+                <input type="checkbox" id="tk12"data-persist>
+                Uudet ketjuniitit
+            </label><br>
+            <label>
+                <input type="checkbox" id="tk13"data-persist>
+                Ketjunpuhdistusaine ja harja
+            </label><br>
+            <label>
+                <input type="checkbox" id="tk14"data-persist>
+                Ketjunöljy
+            </label><br>
+            <h3>Jarruhuolto</h3>
+            <label>
+                <input type="checkbox" id="tk15"data-persist>
+                Kuusiokoloavain (erikokoisia päitä)
+            </label><br>
+            <label>
+                <input type="checkbox" id="tk16"data-persist>
+                Ruuvimmeisseli (philips ja talttapää)
+            </label><br>
+            <label>
+                <input type="checkbox" id="tk17"data-persist>
+                Jarruvaijeri ja Vaijerinkuori
+            </label><br>
+            <label>
+                <input type="checkbox" id="tk18"data-persist>
+                Jarrupalat
+            </label><br>
+            <label>
+                <input type="checkbox" id="tk19"data-persist>
+                Pääteholkki
+            </label><br>
+            <label>
+                <input type="checkbox" id="tk20"data-persist>
+                Sivuleikkurit
+            </label><br>
+            <h4>Ratasjärjestelmän huolto</h4><br>
+            <label>
+                <input type="checkbox" id="tk21"data-persist>
+                Vapaaratasavain (varmista oikea malli)
+            </label><br>
+            <label>
+                <input type="checkbox" id="tk22"data-persist>
+                Säädettävä jakoavain
+            </label><br>
+            <label>
+                <input type="checkbox" id="tk23"data-persist>
+                Ketjupiiska
+            </label><br>
+            <label>
+                <input type="checkbox" id="tk24"data-persist>
+                Kasettityökalu (varmista oikea malli)
+            </label><br>
+            <h4>Kampisarjan huolto</h4><br>
+            <label>
+                <input type="checkbox" id="tk25"data-persist>
+                Kuusiokoloavain (erikokoisia päitä)
+            </label><br>
+            <label>
+                <input type="checkbox" id="tk26"data-persist>
+                Kammen ulosvetäjä
+            </label><br>
+            <label>
+                <input type="checkbox" id="tk27"data-persist>
+                Keskiötyökalu (jos vaihdat keskiön)
+            </label><br>
+            <label >
+                <input type="checkbox" id="tk28"data-persist>
+                momenttiavain
+            </label>
+            <h3>Takavaihtajan huolto</h3>
+            <label>
+                <input type="checkbox" id="tk29"data-persist>
+                Kuusiokoloavain (erikokoisia päitä)
+            </label><br>
+            <label>
+                <input type="checkbox" id="tk30"data-persist>
+                Ruuvimeisseli (philips ja talttapää)
+            </label><br>
+            <label>
+                <input type="checkbox" id="tk31"data-persist>
+                Pihdit ja Sivuleikkurit
+            </label><br>
+            <label>
+                <input type="checkbox" id="tk32"data-persist>
+                Momenttiavain
+            </label><br><br>
+            <h3>Pyörän pesemiseen</h3><br>
+            <label>
+                <input type="checkbox" id="tk33"data-persist>
+                Puhtaita rättejä
+            </label><br>
+            <label>
+                <input type="checkbox" id="tk34"data-persist>
+                Rasvanpoistoaine
+            </label><br>
+            <label>
+                <input type="checkbox" id="tk35"data-persist>
+                Yleispuhdistusaine (esim. Simple Green)
+            </label><br>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Pyöränhuolto</p>
+    </footer>
+    <script src="tyokalut.js"></script>
+</body>
+</html>
