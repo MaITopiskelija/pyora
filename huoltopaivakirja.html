@@ -4,14 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pyöränhuolto</title>
-     <link rel= "stylesheet" href="bootstrap.css">
-    <link rel="stylesheet" href="style.css" />
+     <link rel= "stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
 </head>
 <body>
     <header>
        <h1>Pyöränhuolto</h1>
-            <img src="images/kuvake2.png" alt="Kuvake" class="img" />
+            <img src="images/kuvake2.png" alt="Kuvake" class="logo-img" />
 
         <!-- Hampurilaisvalikon nappi -->
         <div class="menu-icon" id="menu-icon">
@@ -30,12 +30,13 @@
                 <li><a href="huoltopaivakirja.html">Huoltopäiväkirja</a></li>
                 <li><a href="huoltoliikkeet.html">Huoltoliikkeet</a></li>
                 <li><a href="pyorailyvinkit.html">Pyöräilyvinkit</a></li>
-                <li><a href="yhteiso.html">Yhteisö</a></li>
+                
             </ul>
         </nav>
     </header>
 
     <main>
+        <section class="form">
         <section class="content">
             <h2>Huoltopäiväkirja</h2>
             <p>Kirjaa pyöräsi huollot helposti alla olevalla lomakkeella.</p>
@@ -65,13 +66,14 @@
             <h3>Huoltotapahtumat</h3>
             <ul id="huoltoLista"></ul>
         </section>
+        </section>
     </main>
 
     <footer>
         <p>&copy; 2025 Pyöränhuolto</p>
     </footer>
 
-<script src="huolto.js"></script>
+<script src="js/huolto.js"></script>
  
 </body>
 </html>

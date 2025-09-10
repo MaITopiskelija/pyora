@@ -3,34 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Huolto-oppaat</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="bootstrap.css">
+    <title>Pyöränhuolto</title>
+     <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+   
 </head>
 <body>
-    <header>
+      <header>
         <h1>Pyöränhuolto</h1>
-        <nav>
+            <img src="images/kuvake2.png" alt="Kuvake" class="logo-img">
+            
+        <!-- Hampurilaisvalikon nappi -->
+        <div class="menu-icon" id="menu-icon">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+
+        <!-- Navigaatiovalikko -->
+        <nav id="nav-menu" class="hidden">
             <ul>
                 <li><a href="index.html">Etusivu</a></li>
-                <li><a href="perusteet.html">Pyöränhuollon perusteet</a></li>
+                <li><a href="perusteet.html">Perusteet</a></li>
                 <li><a href="oppaat.html">Huolto-oppaat</a></li>
                 <li><a href="tyokalut.html">Työkalut</a></li>
                 <li><a href="huoltopaivakirja.html">Huoltopäiväkirja</a></li>
                 <li><a href="huoltoliikkeet.html">Huoltoliikkeet</a></li>
                 <li><a href="pyorailyvinkit.html">Pyöräilyvinkit</a></li>
-                <li><a href="yhteiso.html">Yhteisö</a></li>
+              
             </ul>
-            <input type="text" id="searchbox" placeholder="Hae ongelma">
-            <div id="searchresults"></div>
         </nav>
     </header>
     <main>
         <section class="hero">
-            <ul>
-                <li>Tarvittavat työkalut löytyy "työkalut" osiosta.</li>
-                <li>MUISTA MYÖS PYÖRÄN SÄÄNNÖLLINEN PUTSAUS!</li>
-            </ul>
+          
+                Tarvittavat työkalut löytyy "työkalut" osiosta.<br>
+                Muista pyörän säännöllinen puhdistaminen. 
+           
         </section>
 
         <section class="container">
@@ -38,7 +47,7 @@
                 <div class="card-body">
                     <h2 class="card-title" title="Renkaan ja sisäkumin huolto"id="renkaan-huolto">Renkaan huolto</h2>
                     <ul class="mb-3">
-                        <li>2 Tapaa: paikkaaminen ja vaihtaminen</li>
+                        Kaksi tapaa:
                         <li>Paikkaaminen pieniin reikiin</li>
                         <li>Vaihtaminen suurempiin vaurioihin</li>
                     </ul>
@@ -50,7 +59,7 @@
                         data-bs-target="#mainVideoCollapse" 
                         aria-expanded="false" 
                         aria-controls="mainVideoCollapse">
-                        Show / Hide Videos
+                        Näytä / piilota videot
                     </button>
 
                     <div class="collapse" id="mainVideoCollapse">
@@ -114,9 +123,10 @@
                 <div class="card-body">
                     <h2 class="card-title" title="Ketjun huolto"id="ketjun-huolto">Ketjun huolto</h2>
                     <ul class="mb-3">
-                        <li></li>
-                        <li></li>
-                        <li></li>
+                        <p>Toimenpiteet:</p>
+                        <li>Puhdistus: poista likaiset ja öljyiset kerrostumat ketjusta esim. liuottimella</li>
+                        <li>Kuivaus: kuivaa ketju huolellisesti liuottimen jälkeen</li>
+                        <li>Öljyäminen: levitä ketjulle sopivaa öljyä tai voiteluainetta </li>
                     </ul>
 
                     <button 
@@ -126,7 +136,7 @@
                         data-bs-target="#mainVideoCollapse2" 
                         aria-expanded="false" 
                         aria-controls="mainVideoCollapse2">
-                        Show / Hide Videos
+                        Näytä / piilota videot
                     </button>
 
                     <div class="collapse" id="mainVideoCollapse2">
@@ -139,7 +149,7 @@
                                     data-bs-target="#video3" 
                                     aria-expanded="false" 
                                     aria-controls="video3">
-                                    Video 1: Vaihto matkan aikana
+                                    Video 1: <br>Vaihto matkan aikana
                                 </button>
                             </p>
                             <div class="collapse" id="video3">
@@ -163,7 +173,7 @@
                                     data-bs-target="#video4" 
                                     aria-expanded="false" 
                                     aria-controls="video4">
-                                    Video 2: Uuden ketjun asennus
+                                    Video 2:<br>Uuden ketjun asennus
                                 </button>
                             </p>
                             <div class="collapse" id="video4">
@@ -190,7 +200,7 @@
                 <div class="card-body">
                     <h2 class="card-title" title="Polkimien vaihto"id="polkimien-vaihto">Polkimien vaihto</h2>
                     <ul class="mb-3">
-                        <h4>Syitä:</h4>
+                        <p>Syitä:</p>
                         <li>Poljin haljennut</li>
                         <li>Poljin ei pyöri kunnolla</li>
                         <li>Haluat vaihtaa polkimet</li>
@@ -199,7 +209,7 @@
         
                     <p>
                         <button class="btn btn-dark w-100" type="button" data-bs-toggle="collapse" data-bs-target="#videoCollapse2" aria-expanded="false" aria-controls="videoCollapse2">
-                            Show / Hide Video
+                            Näytä / piilota videot
                         </button>
                     </p>
 
@@ -221,9 +231,14 @@
                 <div class="card-body">
                     <h2 class="card-title" title="Jarrujen huolto"id="jarrujen-huolto">Jarrujen huolto</h2>
                     <ul class="mb-3">
-                        <li></li>
-                        <li></li>
-                        <li></li>
+                        <p>Toimenpiteet:</p>
+                        <li>Tarkista jarrupalojen kunto</li>
+                        <li>Puhdista jarrut</li>
+                        <li>Tarkista jarrkukahvan toiminta</li>
+                        <li>Tarkista jarruvaijerit</li>
+                        <li>Säädä jarrujen herkkyys</li>
+                        <li>Tarkista jarrulevyjen kunto</li>
+                        <li>Testaa jarrut</li>
                     </ul>
 
                     <button 
@@ -233,7 +248,7 @@
                         data-bs-target="#mainVideoCollapse3" 
                         aria-expanded="false" 
                         aria-controls="mainVideoCollapse3">
-                        Show / Hide Videos
+                         Näytä / piilota videot
                     </button>
 
                     <div class="collapse" id="mainVideoCollapse3">
@@ -246,7 +261,7 @@
                                     data-bs-target="#video5" 
                                     aria-expanded="false" 
                                     aria-controls="video5">
-                                    Video 1: Jarrut narisee
+                                    Video 1: <br>Jarrut narisee
                                 </button>
                             </p>
                             <div class="collapse" id="video5">
@@ -270,7 +285,7 @@
                                     data-bs-target="#video6" 
                                     aria-expanded="false" 
                                     aria-controls="video6">
-                                    Video 2: Jarrut löysällä tai kireällä
+                                    Video 2: <br>Jarrut löysällä tai kireällä
                                 </button>
                             </p>
                             <div class="collapse" id="video6">
@@ -292,7 +307,7 @@
                                     data-bs-target="#video7" 
                                     aria-expanded="false" 
                                     aria-controls="video7">
-                                    Video 3: Jarru kaapelien vaihto
+                                    Video 3: <br>Jarrukaapelien vaihto
                                 </button>
                             </p>
                             <div class="collapse" id="video7">
@@ -318,9 +333,11 @@
                 <div class="card-body">
                     <h2 class="card-title" title="Vaihteiston huolto"id="vaihteiston-huolto">Vaihteiston huolto</h2>
                     <ul class="mb-3">
-                        <li></li>
-                        <li></li>
-                        <li></li>
+                        <p>Toimenpiteet:</p>
+                        <li>Säädä vaihteenvaihtaja</li>
+                        <li>Tarkista vaijerit</li>
+                        <li>Tarkista vaihteenpyörien kunto</li>
+                        <li>Testaa vaihteenvaihto</li>
                     </ul>
 
                     <button 
@@ -330,7 +347,7 @@
                         data-bs-target="#mainVideoCollapse4" 
                         aria-expanded="false" 
                         aria-controls="mainVideoCollapse4">
-                        Show / Hide Videos
+                         Näytä / piilota videot
                     </button>
 
                     <div class="collapse" id="mainVideoCollapse4">
@@ -343,7 +360,7 @@
                                     data-bs-target="#video8" 
                                     aria-expanded="false" 
                                     aria-controls="video8">
-                                    Video 1: Vaihteistokaapelin vaihto
+                                    Video 1: <br>Vaihteistokaapelin vaihto
                                 </button>
                             </p>
                             <div class="collapse" id="video8">
@@ -367,7 +384,7 @@
                                     data-bs-target="#video9" 
                                     aria-expanded="false" 
                                     aria-controls="video9">
-                                    Video 2: Säädä huonosti vaihteleva vaihteisto
+                                    Video 2: <br>Säädä huonosti vaihteleva vaihteisto
                                 </button>
                             </p>
                             <div class="collapse" id="video9">
@@ -389,7 +406,7 @@
                                     data-bs-target="#video10" 
                                     aria-expanded="false" 
                                     aria-controls="video10">
-                                    Video 3: vapaaratasjärjestelmän irroitus ja kiinnitys
+                                    Video 3:<br> Vapaaratasjärjestelmän irroitus ja kiinnitys
                                 </button>
                             </p>
                             <div class="collapse" id="video10">
@@ -411,7 +428,7 @@
                                     data-bs-target="#video11" 
                                     aria-expanded="false" 
                                     aria-controls="video11">
-                                    Video 4: Kasetti ratasjärjestelmän irroitus ja kiinnitys
+                                    Video 4: <br>Kasettiratasjärjestelmän irroitus ja kiinnitys
                                 </button>
                             </p>
                             <div class="collapse" id="video11">
@@ -433,7 +450,7 @@
                                     data-bs-target="#video12" 
                                     aria-expanded="false" 
                                     aria-controls="video12">
-                                    Video 5: Kampisarjan irroitus ja kiinnitys
+                                    Video 5: <br>Kampisarjan irroitus ja kiinnitys
                                 </button>
                             </p>
                             <div class="collapse" id="video12">
@@ -455,7 +472,7 @@
                                     data-bs-target="#video13" 
                                     aria-expanded="false" 
                                     aria-controls="video13">
-                                    Video 5: Takavaihtajan vaihtaminen
+                                    Video 6: <br>Takavaihtajan vaihtaminen
                                 </button>
                             </p>
                             <div class="collapse" id="video13">
@@ -477,7 +494,7 @@
                                     data-bs-target="#video14" 
                                     aria-expanded="false" 
                                     aria-controls="video14">
-                                    Video 5: Takavaihtajan säätäminen
+                                    Video 7: <br>Takavaihtajan säätäminen
                                 </button>
                             </p>
                             <div class="collapse mt-3" id="video14">
@@ -517,7 +534,7 @@
 
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.min.js"></script>
-    <script src="search.js"></script>
+    <script src="js/search.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

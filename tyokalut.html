@@ -4,24 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Työkalut</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel= "stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-    <header>
-        <h1>Työkalut</h1>
-        <nav>
+      <header>
+        <h1>Pyöränhuolto</h1>
+            <img src="images/kuvake2.png" alt="Kuvake" class="logo-img">
+            
+        <!-- Hampurilaisvalikon nappi -->
+        <div class="menu-icon" id="menu-icon">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+
+        <!-- Navigaatiovalikko -->
+        <nav id="nav-menu" class="hidden">
             <ul>
                 <li><a href="index.html">Etusivu</a></li>
-                <li><a href="perusteet.html">Pyöränhuollon perusteet</a></li>
+                <li><a href="perusteet.html">Perusteet</a></li>
                 <li><a href="oppaat.html">Huolto-oppaat</a></li>
                 <li><a href="tyokalut.html">Työkalut</a></li>
                 <li><a href="huoltopaivakirja.html">Huoltopäiväkirja</a></li>
                 <li><a href="huoltoliikkeet.html">Huoltoliikkeet</a></li>
                 <li><a href="pyorailyvinkit.html">Pyöräilyvinkit</a></li>
-                <li><a href="yhteiso.html">Yhteisö</a></li>
+              
             </ul>
-            <input type="text" id="searchbox" placeholder="Hae ongelma">
-            <div id="searchresults"></div>
         </nav>
     </header>
 
@@ -183,6 +192,6 @@
     <footer>
         <p>&copy; 2025 Pyöränhuolto</p>
     </footer>
-    <script src="tyokalut.js"></script>
+    <script src="js/tyokalut.js"></script>
 </body>
 </html>
