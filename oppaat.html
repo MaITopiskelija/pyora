@@ -3,24 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pyöränhuolto</title>
-     <link rel="stylesheet" href="css/bootstrap.css">
+    <title>Huolto-oppaat</title>
     <link rel="stylesheet" href="css/style.css">
-   
+    <link rel="stylesheet" href="css/oppaat.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
 </head>
 <body>
-      <header>
+    <header>
         <h1>Pyöränhuolto</h1>
             <img src="images/kuvake2.png" alt="Kuvake" class="logo-img">
             
-        <!-- Hampurilaisvalikon nappi -->
+        
         <div class="menu-icon" id="menu-icon">
             <div class="bar"></div>
             <div class="bar"></div>
             <div class="bar"></div>
         </div>
 
-        <!-- Navigaatiovalikko -->
         <nav id="nav-menu" class="hidden">
             <ul>
                 <li><a href="index.html">Etusivu</a></li>
@@ -30,91 +29,54 @@
                 <li><a href="huoltopaivakirja.html">Huoltopäiväkirja</a></li>
                 <li><a href="huoltoliikkeet.html">Huoltoliikkeet</a></li>
                 <li><a href="pyorailyvinkit.html">Pyöräilyvinkit</a></li>
-              
             </ul>
+            <input type="text" id="searchbox" placeholder="Hae ongelma">
+            <div id="searchresults"></div>
         </nav>
     </header>
     <main>
         <section class="hero">
-          
-                Tarvittavat työkalut löytyy "työkalut" osiosta.<br>
-                Muista pyörän säännöllinen puhdistaminen. 
-           <input type="text" id="searchbox" placeholder="Hae ongelma">
-            <div id="searchresults"></div>
+            <ul>
+                <li>Tarvittavat työkalut löytyy "työkalut" osiosta.</li>
+                <li>MUISTA MYÖS PYÖRÄN SÄÄNNÖLLINEN PUTSAUS!</li>
+            </ul>
         </section>
 
-        <section class="container">
+        <section id="renkaan-huolto" class="container">
             <div class="card shadow-lg rounded-4">
                 <div class="card-body">
-                    <h2 class="card-title" title="Renkaan ja sisäkumin huolto"id="renkaan-huolto">Renkaan huolto</h2>
+                    <h2 title="Renkaan ja sisäkumin huolto" class="card-title">Renkaan huolto</h2>
                     <ul class="mb-3">
-                        Kaksi tapaa:
+                        <li>2 Tapaa: paikkaaminen ja vaihtaminen</li>
                         <li>Paikkaaminen pieniin reikiin</li>
                         <li>Vaihtaminen suurempiin vaurioihin</li>
                     </ul>
 
-                    <button 
-                        class="btn btn-dark w-100 mb-3" 
-                        type="button" 
-                        data-bs-toggle="collapse" 
-                        data-bs-target="#mainVideoCollapse" 
-                        aria-expanded="false" 
-                        aria-controls="mainVideoCollapse">
-                        Näytä / piilota videot
+                    <button class="btn btn-dark w-100 mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#rengasVideot" aria-expanded="false" aria-controls="rengasVideot">
+                        Show / Hide Videos
                     </button>
 
-                    <div class="collapse" id="mainVideoCollapse">
+                    <div class="collapse" id="rengasVideot">
                         <div class="card card-body">
-                            <p>
-                                <button 
-                                    class="btn btn-outline-primary w-100" 
-                                    type="button" 
-                                    data-bs-toggle="collapse" 
-                                    data-bs-target="#video1" 
-                                    aria-expanded="false" 
-                                    aria-controls="video1">
-                                    Video 1: Paikkaaminen
-                                </button>
-                            </p>
-                            <div class="collapse" id="video1">
-                                <div class="d-flex justify-content-center mb-3">
-                                    <div class="ratio ratio-16x9" style="max-width: 560px;">
-                                        <iframe 
-                                            src="https://www.youtube.com/embed/5lKjCn3tulE?mute=1" 
-                                            title="Video 1"
-                                            allowfullscreen>
-                                        </iframe>
+                            <ul class="nav nav-pills justify-content-center mb-3" id="rengas-tab" role="tablist">
+                                <li class="nav-item"><button class="nav-link active" id="r1-tab" data-bs-toggle="pill" data-bs-target="#r1" type="button">Paikkaaminen</button></li>
+                                <li class="nav-item"><button class="nav-link" id="r2-tab" data-bs-toggle="pill" data-bs-target="#r2" type="button">Vaihtaminen</button></li>
+                            </ul>
+
+                            <div class="tab-content text-center" id="rengas-tabContent">
+                                <div class="tab-pane fade show active" id="r1" role="tabpanel">
+                                    <div class="ratio ratio-16x9" style="max-width:720px; margin:auto;">
+                                        <iframe src="https://www.youtube.com/embed/5lKjCn3tulE?mute=1" allowfullscreen></iframe>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="r2" role="tabpanel">
+                                    <div class="ratio ratio-16x9" style="max-width:720px; margin:auto;">
+                                        <iframe src="https://www.youtube.com/embed/C_bwHYiX-Vw?mute=1" allowfullscreen></iframe>
                                     </div>
                                 </div>
                             </div>
-
-          
-                            <p>
-                                <button 
-                                    class="btn btn-outline-primary w-100" 
-                                    type="button" 
-                                    data-bs-toggle="collapse" 
-                                    data-bs-target="#video2" 
-                                    aria-expanded="false" 
-                                    aria-controls="video2">
-                                    Video 2: Vaihtaminen
-                                </button>
-                            </p>
-                            <div class="collapse" id="video2">
-                                <div class="d-flex justify-content-center mb-3">
-                                    <div class="ratio ratio-16x9" style="max-width: 560px;">
-                                        <iframe 
-                                            src="https://www.youtube.com/embed/C_bwHYiX-Vw?mute=1" 
-                                            title="Video 2"
-                                            allowfullscreen>
-                                        </iframe>
-                                    </div>
-                                </div>
-                            </div>
-
                         </div>
                     </div>
-
                 </div>
             </div>
         </section>
@@ -122,76 +84,39 @@
         <section class="container">
             <div class="card shadow-lg rounded-4">
                 <div class="card-body">
-                    <h2 class="card-title" title="Ketjun huolto"id="ketjun-huolto">Ketjun huolto</h2>
+                    <h2 title="Ketjun huolto" class="card-title" id="ketjun-huolto">Ketjun huolto</h2>
                     <ul class="mb-3">
-                        <p>Toimenpiteet:</p>
+                        <h4>Toimenpiteet:</h4>
                         <li>Puhdistus: poista likaiset ja öljyiset kerrostumat ketjusta esim. liuottimella</li>
                         <li>Kuivaus: kuivaa ketju huolellisesti liuottimen jälkeen</li>
                         <li>Öljyäminen: levitä ketjulle sopivaa öljyä tai voiteluainetta </li>
                     </ul>
 
-                    <button 
-                        class="btn btn-dark w-100 mb-3" 
-                        type="button" 
-                        data-bs-toggle="collapse" 
-                        data-bs-target="#mainVideoCollapse2" 
-                        aria-expanded="false" 
-                        aria-controls="mainVideoCollapse2">
-                        Näytä / piilota videot
+                    <button class="btn btn-dark w-100 mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#ketjuVideot" aria-expanded="false" aria-controls="ketjuVideot">
+                        Show / Hide Videos
                     </button>
 
-                    <div class="collapse" id="mainVideoCollapse2">
+                    <div class="collapse" id="ketjuVideot">
                         <div class="card card-body">
-                            <p>
-                                <button 
-                                    class="btn btn-outline-primary w-100" 
-                                    type="button" 
-                                    data-bs-toggle="collapse" 
-                                    data-bs-target="#video3" 
-                                    aria-expanded="false" 
-                                    aria-controls="video3">
-                                    Video 1: <br>Vaihto matkan aikana
-                                </button>
-                            </p>
-                            <div class="collapse" id="video3">
-                                <div class="d-flex justify-content-center mb-3">
-                                    <div class="ratio ratio-16x9" style="max-width: 560px;">
-                                        <iframe 
-                                            src="https://www.youtube.com/embed/HpUCCrgugQE?mute=1" 
-                                            title="Video 3"
-                                            allowfullscreen>
-                                        </iframe>
+                            <ul class="nav nav-pills justify-content-center mb-3" id="ketju-tab" role="tablist">
+                                <li class="nav-item"><button class="nav-link active" id="k1-tab" data-bs-toggle="pill" data-bs-target="#k1" type="button">Vaihto matkan aikana</button></li>
+                                <li class="nav-item"><button class="nav-link" id="k2-tab" data-bs-toggle="pill" data-bs-target="#k2" type="button">Uuden ketjun asennus</button></li>
+                            </ul>
+
+                            <div class="tab-content text-center" id="ketju-tabContent">
+                                <div class="tab-pane fade show active" id="k1">
+                                    <div class="ratio ratio-16x9" style="max-width:720px; margin:auto;">
+                                        <iframe src="https://www.youtube.com/embed/HpUCCrgugQE?mute=1" allowfullscreen></iframe>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="k2">
+                                    <div class="ratio ratio-16x9" style="max-width:720px; margin:auto;">
+                                        <iframe src="https://www.youtube.com/embed/rWchudX-Tqs?mute=1" allowfullscreen></iframe>
                                     </div>
                                 </div>
                             </div>
-
-          
-                            <p>
-                                <button 
-                                    class="btn btn-outline-primary w-100" 
-                                    type="button" 
-                                    data-bs-toggle="collapse" 
-                                    data-bs-target="#video4" 
-                                    aria-expanded="false" 
-                                    aria-controls="video4">
-                                    Video 2:<br>Uuden ketjun asennus
-                                </button>
-                            </p>
-                            <div class="collapse" id="video4">
-                                <div class="d-flex justify-content-center mb-3">
-                                    <div class="ratio ratio-16x9" style="max-width: 560px;">
-                                        <iframe 
-                                            src="https://www.youtube.com/embed/rWchudX-Tqs?mute=1" 
-                                            title="Video 4"
-                                            allowfullscreen>
-                                        </iframe>
-                                    </div>
-                                </div>
-                            </div>
-
                         </div>
                     </div>
-
                 </div>
             </div>
         </section>
@@ -199,28 +124,21 @@
         <section class="container">
             <div class="card shadow-lg rounded-4">
                 <div class="card-body">
-                    <h2 class="card-title" title="Polkimien vaihto"id="polkimien-vaihto">Polkimien vaihto</h2>
+                    <h2 title="Polkimien vaihto" class="card-title" id="polkimien-vaihto">Polkimien vaihto</h2>
                     <ul class="mb-3">
-                        <p>Syitä:</p>
+                        <h4>Syitä:</h4>
                         <li>Poljin haljennut</li>
                         <li>Poljin ei pyöri kunnolla</li>
                         <li>Haluat vaihtaa polkimet</li>
                     </ul>
 
-        
-                    <p>
-                        <button class="btn btn-dark w-100" type="button" data-bs-toggle="collapse" data-bs-target="#videoCollapse2" aria-expanded="false" aria-controls="videoCollapse2">
-                            Näytä / piilota videot
-                        </button>
-                    </p>
+                    <button class="btn btn-dark w-100 mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#poljinVideo" aria-expanded="false" aria-controls="poljinVideo">
+                        Show / Hide Video
+                    </button>
 
-        
-                    <div class="collapse" id="videoCollapse2">
-                        <div class="ratio ratio-16x9" style="max-width: 560px;">
-                            <iframe src="https://www.youtube.com/embed/LYvHbN9rNZM?mute=1"
-                                title="YouTube video"
-                                allowfullscreen>
-                            </iframe>
+                    <div class="collapse" id="poljinVideo">
+                        <div class="ratio ratio-16x9" style="max-width:720px; margin:auto;">
+                            <iframe src="https://www.youtube.com/embed/LYvHbN9rNZM?mute=1" allowfullscreen></iframe>
                         </div>
                     </div>
                 </div>
@@ -230,9 +148,9 @@
         <section class="container">
             <div class="card shadow-lg rounded-4">
                 <div class="card-body">
-                    <h2 class="card-title" title="Jarrujen huolto"id="jarrujen-huolto">Jarrujen huolto</h2>
+                    <h2 title="Jarrujen huolto" class="card-title" id="jarrujen-huolto">Jarrujen huolto</h2>
                     <ul class="mb-3">
-                        <p>Toimenpiteet:</p>
+                        <h4>Toimenpiteet:</h4>
                         <li>Tarkista jarrupalojen kunto</li>
                         <li>Puhdista jarrut</li>
                         <li>Tarkista jarrkukahvan toiminta</li>
@@ -242,89 +160,37 @@
                         <li>Testaa jarrut</li>
                     </ul>
 
-                    <button 
-                        class="btn btn-dark w-100 mb-3" 
-                        type="button" 
-                        data-bs-toggle="collapse" 
-                        data-bs-target="#mainVideoCollapse3" 
-                        aria-expanded="false" 
-                        aria-controls="mainVideoCollapse3">
-                         Näytä / piilota videot
+                    <button class="btn btn-dark w-100 mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#jarruVideot" aria-expanded="false" aria-controls="jarruVideot">
+                        Show / Hide Videos
                     </button>
 
-                    <div class="collapse" id="mainVideoCollapse3">
+                    <div class="collapse" id="jarruVideot">
                         <div class="card card-body">
-                            <p>
-                                <button 
-                                    class="btn btn-outline-primary w-100" 
-                                    type="button" 
-                                    data-bs-toggle="collapse" 
-                                    data-bs-target="#video5" 
-                                    aria-expanded="false" 
-                                    aria-controls="video5">
-                                    Video 1: <br>Jarrut narisee
-                                </button>
-                            </p>
-                            <div class="collapse" id="video5">
-                                <div class="d-flex justify-content-center mb-3">
-                                    <div class="ratio ratio-16x9" style="max-width: 560px;">
-                                        <iframe 
-                                            src="https://www.youtube.com/embed/NslavfZGzq4?mute=1" 
-                                            title="Video 5"
-                                            allowfullscreen>
-                                        </iframe>
-                                    </div>
-                                </div>
-                            </div>
+                            <ul class="nav nav-pills justify-content-center mb-3" id="jarru-tab" role="tablist">
+                                <li class="nav-item"><button class="nav-link active" id="j1-tab" data-bs-toggle="pill" data-bs-target="#j1" type="button">Jarrut narisee</button></li>
+                                <li class="nav-item"><button class="nav-link" id="j2-tab" data-bs-toggle="pill" data-bs-target="#j2" type="button">Jarrut löysällä</button></li>
+                                <li class="nav-item"><button class="nav-link" id="j3-tab" data-bs-toggle="pill" data-bs-target="#j3" type="button">Kaapelien vaihto</button></li>
+                            </ul>
 
-          
-                            <p>
-                                <button 
-                                    class="btn btn-outline-primary w-100" 
-                                    type="button" 
-                                    data-bs-toggle="collapse" 
-                                    data-bs-target="#video6" 
-                                    aria-expanded="false" 
-                                    aria-controls="video6">
-                                    Video 2: <br>Jarrut löysällä tai kireällä
-                                </button>
-                            </p>
-                            <div class="collapse" id="video6">
-                                <div class="d-flex justify-content-center mb-3">
-                                    <div class="ratio ratio-16x9" style="max-width: 560px;">
-                                        <iframe 
-                                            src="https://www.youtube.com/embed/6ktT21QxYcQ?mute=1" 
-                                            title="Video 6"
-                                            allowfullscreen>
-                                        </iframe>
+                            <div class="tab-content text-center" id="jarru-tabContent">
+                                <div class="tab-pane fade show active" id="j1">
+                                    <div class="ratio ratio-16x9" style="max-width:720px; margin:auto;">
+                                        <iframe src="https://www.youtube.com/embed/NslavfZGzq4?mute=1" allowfullscreen></iframe>
                                     </div>
                                 </div>
-                            </div>
-                            <p>
-                                <button 
-                                    class="btn btn-outline-primary w-100" 
-                                    type="button" 
-                                    data-bs-toggle="collapse" 
-                                    data-bs-target="#video7" 
-                                    aria-expanded="false" 
-                                    aria-controls="video7">
-                                    Video 3: <br>Jarrukaapelien vaihto
-                                </button>
-                            </p>
-                            <div class="collapse" id="video7">
-                                <div class="d-flex justify-content-center mb-3">
-                                    <div class="ratio ratio-16x9" style="max-width: 560px;">
-                                        <iframe 
-                                            src="https://www.youtube.com/embed/8dCZZ1kzTd8?mute=1" 
-                                            title="Video 7"
-                                            allowfullscreen>
-                                        </iframe>
+                                <div class="tab-pane fade" id="j2">
+                                    <div class="ratio ratio-16x9" style="max-width:720px; margin:auto;">
+                                        <iframe src="https://www.youtube.com/embed/6ktT21QxYcQ?mute=1" allowfullscreen></iframe>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="j3">
+                                    <div class="ratio ratio-16x9" style="max-width:720px; margin:auto;">
+                                        <iframe src="https://www.youtube.com/embed/8dCZZ1kzTd8?mute=1" allowfullscreen></iframe>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </section>
@@ -332,208 +198,94 @@
         <section class="container">
             <div class="card shadow-lg rounded-4">
                 <div class="card-body">
-                    <h2 class="card-title" title="Vaihteiston huolto"id="vaihteiston-huolto">Vaihteiston huolto</h2>
+                    <h2 title="Vaihteiston huolto" class="card-title" id="vaihteiston-huolto">Vaihteiston huolto</h2>
                     <ul class="mb-3">
-                        <p>Toimenpiteet:</p>
+                        <h4>Toimenpiteet:</h4>
                         <li>Säädä vaihteenvaihtaja</li>
                         <li>Tarkista vaijerit</li>
                         <li>Tarkista vaihteenpyörien kunto</li>
                         <li>Testaa vaihteenvaihto</li>
                     </ul>
 
-                    <button 
-                        class="btn btn-dark w-100 mb-3" 
-                        type="button" 
-                        data-bs-toggle="collapse" 
-                        data-bs-target="#mainVideoCollapse4" 
-                        aria-expanded="false" 
-                        aria-controls="mainVideoCollapse4">
-                         Näytä / piilota videot
+                    <button class="btn btn-dark w-100 mb-3" type="button" data-bs-toggle="collapse" data-bs-target="#vaihdeVideot" aria-expanded="false" aria-controls="vaihdeVideot">
+                        Show / Hide Videos
                     </button>
 
-                    <div class="collapse" id="mainVideoCollapse4">
+                    <div class="collapse" id="vaihdeVideot">
                         <div class="card card-body">
-                            <p>
-                                <button 
-                                    class="btn btn-outline-primary w-100" 
-                                    type="button" 
-                                    data-bs-toggle="collapse" 
-                                    data-bs-target="#video8" 
-                                    aria-expanded="false" 
-                                    aria-controls="video8">
-                                    Video 1: <br>Vaihteistokaapelin vaihto
-                                </button>
-                            </p>
-                            <div class="collapse" id="video8">
-                                <div class="d-flex justify-content-center mb-3">
-                                    <div class="ratio ratio-16x9" style="max-width: 560px;">
-                                        <iframe 
-                                            src="https://www.youtube.com/embed/8gv2x6yPZpA?mute=1" 
-                                            title="Video 8"
-                                            allowfullscreen>
-                                        </iframe>
-                                    </div>
-                                </div>
-                            </div>
+                            <ul class="nav nav-pills justify-content-center mb-3" id="vaihde-tab" role="tablist">
+                                <li class="nav-item"><button class="nav-link active" id="v8-tab" data-bs-toggle="pill" data-bs-target="#v8" type="button">Kaapelin vaihto</button></li>
+                                <li class="nav-item"><button class="nav-link" id="v9-tab" data-bs-toggle="pill" data-bs-target="#v9" type="button">Säätäminen</button></li>
+                                <li class="nav-item"><button class="nav-link" id="v10-tab" data-bs-toggle="pill" data-bs-target="#v10" type="button">Vapaaratas</button></li>
+                                <li class="nav-item"><button class="nav-link" id="v11-tab" data-bs-toggle="pill" data-bs-target="#v11" type="button">Kasetti</button></li>
+                                <li class="nav-item"><button class="nav-link" id="v12-tab" data-bs-toggle="pill" data-bs-target="#v12" type="button">Kampisarja</button></li>
+                                <li class="nav-item"><button class="nav-link" id="v13-tab" data-bs-toggle="pill" data-bs-target="#v13" type="button">Takavaihtajan vaihto</button></li>
+                                <li class="nav-item"><button class="nav-link" id="v14-tab" data-bs-toggle="pill" data-bs-target="#v14" type="button">Takavaihtajan säätö</button></li>
+                            </ul>
 
-          
-                            <p>
-                                <button 
-                                    class="btn btn-outline-primary w-100" 
-                                    type="button" 
-                                    data-bs-toggle="collapse" 
-                                    data-bs-target="#video9" 
-                                    aria-expanded="false" 
-                                    aria-controls="video9">
-                                    Video 2: <br>Säädä huonosti vaihteleva vaihteisto
-                                </button>
-                            </p>
-                            <div class="collapse" id="video9">
-                                <div class="d-flex justify-content-center mb-3">
-                                    <div class="ratio ratio-16x9" style="max-width: 560px;">
-                                        <iframe 
-                                            src="https://www.youtube.com/embed/Bx6y8BS_D4s?mute=1" 
-                                            title="Video 9"
-                                            allowfullscreen>
-                                        </iframe>
+                            <div class="tab-content text-center" id="vaihde-tabContent">
+                                <div class="tab-pane fade show active" id="v8">
+                                    <div class="ratio ratio-16x9" style="max-width:720px; margin:auto;">
+                                        <iframe src="https://www.youtube.com/embed/8gv2x6yPZpA?mute=1" allowfullscreen></iframe>
                                     </div>
                                 </div>
-                            </div>
-                            <p>
-                                <button 
-                                    class="btn btn-outline-primary w-100" 
-                                    type="button" 
-                                    data-bs-toggle="collapse" 
-                                    data-bs-target="#video10" 
-                                    aria-expanded="false" 
-                                    aria-controls="video10">
-                                    Video 3:<br> Vapaaratasjärjestelmän irroitus ja kiinnitys
-                                </button>
-                            </p>
-                            <div class="collapse" id="video10">
-                                <div class="d-flex justify-content-center mb-3">
-                                    <div class="ratio ratio-16x9" style="max-width: 560px;">
-                                        <iframe 
-                                            src="https://www.youtube.com/embed/kUZkzjpAxH0?mute=1" 
-                                            title="Video 10"
-                                            allowfullscreen>
-                                        </iframe>
+                                <div class="tab-pane fade" id="v9">
+                                    <div class="ratio ratio-16x9" style="max-width:720px; margin:auto;">
+                                        <iframe src="https://www.youtube.com/embed/Bx6y8BS_D4s?mute=1" allowfullscreen></iframe>
                                     </div>
                                 </div>
-                            </div>
-                            <p>
-                                <button 
-                                    class="btn btn-outline-primary w-100" 
-                                    type="button" 
-                                    data-bs-toggle="collapse" 
-                                    data-bs-target="#video11" 
-                                    aria-expanded="false" 
-                                    aria-controls="video11">
-                                    Video 4: <br>Kasettiratasjärjestelmän irroitus ja kiinnitys
-                                </button>
-                            </p>
-                            <div class="collapse" id="video11">
-                                <div class="d-flex justify-content-center mb-3">
-                                    <div class="ratio ratio-16x9" style="max-width: 560px;">
-                                        <iframe 
-                                            src="https://www.youtube.com/embed/DNzcrn8_S-k?mute=1" 
-                                            title="Video 11"
-                                            allowfullscreen>
-                                        </iframe>
+                                <div class="tab-pane fade" id="v10">
+                                    <div class="ratio ratio-16x9" style="max-width:720px; margin:auto;">
+                                        <iframe src="https://www.youtube.com/embed/kUZkzjpAxH0?mute=1" allowfullscreen></iframe>
                                     </div>
                                 </div>
-                            </div>
-                            <p>
-                                <button 
-                                    class="btn btn-outline-primary w-100" 
-                                    type="button" 
-                                    data-bs-toggle="collapse" 
-                                    data-bs-target="#video12" 
-                                    aria-expanded="false" 
-                                    aria-controls="video12">
-                                    Video 5: <br>Kampisarjan irroitus ja kiinnitys
-                                </button>
-                            </p>
-                            <div class="collapse" id="video12">
-                                <div class="d-flex justify-content-center mb-3">
-                                    <div class="ratio ratio-16x9" style="max-width: 560px;">
-                                        <iframe 
-                                            src="https://www.youtube.com/embed/8B6LdZPa4M8?mute=1" 
-                                            title="Video 12"
-                                            allowfullscreen>
-                                        </iframe>
+                                <div class="tab-pane fade" id="v11">
+                                    <div class="ratio ratio-16x9" style="max-width:720px; margin:auto;">
+                                        <iframe src="https://www.youtube.com/embed/DNzcrn8_S-k?mute=1" allowfullscreen></iframe>
                                     </div>
                                 </div>
-                            </div>
-                            <p>
-                                <button 
-                                    class="btn btn-outline-primary w-100" 
-                                    type="button" 
-                                    data-bs-toggle="collapse" 
-                                    data-bs-target="#video13" 
-                                    aria-expanded="false" 
-                                    aria-controls="video13">
-                                    Video 6: <br>Takavaihtajan vaihtaminen
-                                </button>
-                            </p>
-                            <div class="collapse" id="video13">
-                                <div class="d-flex justify-content-center mb-3">
-                                    <div class="ratio ratio-16x9" style="max-width: 560px;">
-                                        <iframe 
-                                            src="https://www.youtube.com/embed/ESlTUWdyfTk?mute=1" 
-                                            title="Video 13"
-                                            allowfullscreen>
-                                        </iframe>
+                                <div class="tab-pane fade" id="v12">
+                                    <div class="ratio ratio-16x9" style="max-width:720px; margin:auto;">
+                                        <iframe src="https://www.youtube.com/embed/8B6LdZPa4M8?mute=1" allowfullscreen></iframe>
                                     </div>
                                 </div>
-                            </div>
-                            <p>
-                                <button 
-                                    class="btn btn-outline-primary w-100" 
-                                    type="button" 
-                                    data-bs-toggle="collapse" 
-                                    data-bs-target="#video14" 
-                                    aria-expanded="false" 
-                                    aria-controls="video14">
-                                    Video 7: <br>Takavaihtajan säätäminen
-                                </button>
-                            </p>
-                            <div class="collapse mt-3" id="video14">
-                                <div class="d-flex flex-column align-items-center gap-3">
-                                    <div class="ratio ratio-16x9" style="max-width: 560px;">
-                                        <iframe 
-                                            src="https://www.youtube.com/embed/CHaTWk6uqd8?mute=1" 
-                                            title="Video 14"
-                                            allowfullscreen>
-                                        </iframe>
+                                <div class="tab-pane fade" id="v13">
+                                    <div class="ratio ratio-16x9" style="max-width:720px; margin:auto;">
+                                        <iframe src="https://www.youtube.com/embed/ESlTUWdyfTk?mute=1" allowfullscreen></iframe>
                                     </div>
-                                    <div class="ratio ratio-16x9" style="max-width: 560px;">
-                                        <iframe 
-                                            src="https://www.youtube.com/embed/rItahnBO9BE?mute=1" 
-                                            title="Video 14"
-                                            allowfullscreen>
-                                        </iframe>
-                                    </div>
-                                    <div class="ratio ratio-16x9" style="max-width: 560px;">
-                                        <iframe 
-                                            src="https://www.youtube.com/embed/4sm-tTbfamM?mute=1" 
-                                            title="Video 14"
-                                            allowfullscreen>
-                                        </iframe>
+                                </div>
+                                <div class="tab-pane fade" id="v14">
+                                    <div class="row g-3">
+                                        <div class="col-md-4">
+                                            <div class="ratio ratio-16x9">
+                                                <iframe src="https://www.youtube.com/embed/CHaTWk6uqd8?mute=1" allowfullscreen></iframe>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="ratio ratio-16x9">
+                                                <iframe src="https://www.youtube.com/embed/rItahnBO9BE?mute=1" allowfullscreen></iframe>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="ratio ratio-16x9">
+                                                <iframe src="https://www.youtube.com/embed/4sm-tTbfamM?mute=1" allowfullscreen></iframe>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </section>
+    
     </main>
 
     <footer>
-
+        <p>&copy; 2025 Pyöränhuolto</p>
     </footer>
+    <script src="js/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.min.js"></script>
     <script src="js/search.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

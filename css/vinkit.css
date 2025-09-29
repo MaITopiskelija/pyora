@@ -1,0 +1,64 @@
+.vinkit {
+  padding: 40px 20px;
+  background-color: #f4f4f4;
+  text-align: center;
+}
+
+.vinkit h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+.vinkit p {
+  text-align:left;
+}
+
+
+.kortit {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.kortti {
+  background-color: white;
+  padding: 20px;
+  max-width: 300px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  text-align: left;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.kortti i {
+  color: #2980b9;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.kortti h3 {
+  margin-top: 0;
+  color: #2980b9;
+  text-align: center;
+}
+.kortti h5{
+  margin-top: 0;
+  color: #2980b9;
+}
+.kortti:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* 📱 Mobiilissa kortit allekkain */
+@media (max-width: 768px) {
+  .kortit {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .kortti {
+    width: 90%;
+  }
+}

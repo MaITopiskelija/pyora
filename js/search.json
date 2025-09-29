@@ -1,0 +1,13 @@
+[
+    {"title": "Renkaan ja sisäkumin huolto", "keywords": ["tyhjä", "reikä", "rengas", "paikka", "paikkaus", "paikkaaminen", "puhki", "puhjennut", "kumi", "sisäkumi", "venttiili"], "link": "oppaat.html#renkaan-huolto"},
+    {"title": "Ketjun huolto", "keywords": ["ketju", "ketjut", "poikki", "katkennut"], "link": "oppaat.html#ketjun-huolto"},
+    {"title": "Polkimien vaihto", "keywords": ["poljin", "polkimet", "vaihto", "murtunut", "halki", "haljennut", "jäykkä", "pyöri", "huonosti"], "link": "oppaat.html#polkimien-vaihto"},
+    {"title": "Jarrujen huolto", "keywords": ["jarru", "jarrut", "jarruvaijeri", "vaijeri", "löysä", "tiukka"], "link": "oppaat.html#jarrujen-huolto"},
+    {"title": "Vaihteiston huolto", "keywords": ["vaihteisto", "vaihteistokaapeli", "kaapeli", "säätäminen", "vapaaratas", "kasetti", "kampisarja", "takavahtaja", "takavaihtaja"], "link": "oppaat.html#vaihteiston-huolto"},
+    {"title": "Työkalut", "keywords": ["työkalu", "työkalut"], "link": "tyokalut.html"},
+    {"title": "Huoltopäiväkirja", "keywords": ["päiväkirja", "kirja", "muistiinpano", "huoltopäiväkirja", "huolto"], "link": "huoltopaivakirja.html"},
+    {"title": "Liikkeet", "keywords": ["huoltoliikkeet", "huoltoliike" ,"liike", "liikkeet", "kartta", "kartalla"], "link": "huoltoliikkeet.html"},
+    {"title": "Vinkit", "keywords": ["vinkki", "vinkit", "motivaatio", "terve", "terveys", "turva", "turvallisuus", "reitti", "reitit", "tekniikka", "etiikka", "ympäristö", "ekologia", "ekologinen", "asento", "kunto", "mieliala", "mieli", "pyöräilyvinkit", "pyöräilyvinkki", "kypärä", "essentiaalit", "turvavaruste", "varusteet", "turvavarusteet"], "link": "pyorailyvinkit.html"},
+    {"title": "Perusteet", "keywords": ["perusteet", "yleisimmät", "arki", "perushuolto"], "link": "perusteet.html"}
+
+] 

@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html lang="fi">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pyöränhuolto</title>
-     <link rel= "stylesheet" href="bootstrap.css">
-    <link rel="stylesheet" href="style.css" />
+    <link rel= "stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
 </head>
 <body>
     <header>
-       <h1>Pyöränhuolto</h1>
-            <img src="images/kuvake2.png" alt="Kuvake" class="logo-img" />
+        <h1>Pyöränhuolto</h1>
+        <img src="images/kuvake2.png" alt="Kuvake" class="logo-img">
 
         <!-- Hampurilaisvalikon nappi -->
         <div class="menu-icon" id="menu-icon">
@@ -30,42 +30,49 @@
                 <li><a href="huoltopaivakirja.html">Huoltopäiväkirja</a></li>
                 <li><a href="huoltoliikkeet.html">Huoltoliikkeet</a></li>
                 <li><a href="pyorailyvinkit.html">Pyöräilyvinkit</a></li>
-                
             </ul>
+            <input type="text" id="searchbox" placeholder="Hae ongelma">
+            <div id="searchresults"></div>
         </nav>
     </header>
 
     <main>
         <section class="form">
-        <section class="content">
-            <h2>Huoltopäiväkirja</h2>
-            <p>Kirjaa pyöräsi huollot helposti alla olevalla lomakkeella.</p>
+            <div class="content">
+                <h2 title="Huoltopäiväkirja">Huoltopäiväkirja</h2>
+                <p>Kirjaa pyöräsi huollot helposti alla olevalla lomakkeella.</p>
 
-            <form id="huoltoForm">
-                <label for="pyora">Pyörän nimi tai malli:</label>
-                <input type="text" id="pyora" name="pyora" required />
+                <form id="huoltoForm">
+                    <label for="pyora">Pyörän nimi tai malli:</label>
+                    <input type="text" id="pyora" name="pyora" required />
 
-                <label for="pvm">Huollon päivämäärä:</label>
-                <input type="date" id="pvm" name="pvm" required />
+                    <label for="pvm">Huollon päivämäärä:</label>
+                    <input type="date" id="pvm" name="pvm" required />
 
-                <label for="toimenpiteet">Tehdyt toimenpiteet:</label>
-                <select id="toimenpiteet" name="toimenpiteet" multiple>
-                    <option value="ketjujen voitelu">Ketjujen voitelu</option>
-                    <option value="jarrujen säätö">Jarrujen säätö</option>
-                    <option value="vaihteiden säätö">Vaihteiden säätö</option>
-                    <option value="renkaiden tarkistus">Renkaiden tarkistus</option>
-                    <option value="yleishuolto">Yleishuolto</option>
-                </select>
+                    <label for="toimenpiteet">Tehdyt toimenpiteet:</label>
+                    <select id="toimenpiteet" name="toimenpiteet" multiple>
+                        <option value="ketjujen voitelu">Ketjujen voitelu</option>
+                        <option value="jarrujen säätö">Jarrujen säätö</option>
+                        <option value="vaihteiden säätö">Vaihteiden säätö</option>
+                        <option value="renkaiden tarkistus">Renkaiden tarkistus</option>
+                        <option value="yleishuolto">Yleishuolto</option>
+                    </select>
 
-                <label for="lisatietoja">Lisätietoja:</label>
-                <textarea id="lisatietoja" name="lisatietoja" rows="4" placeholder="Esim. mitä huomioit pyörässä..."></textarea>
+                    <label for="lisatietoja">Lisätietoja:</label>
+                    <textarea id="lisatietoja" name="lisatietoja" rows="4" placeholder="Esim. mitä huomioit pyörässä..."></textarea>
 
-                <button type="submit">Tallenna huolto</button>
-            </form>
+                    <button type="submit">Tallenna huolto</button>
+                </form>
 
-            <h3>Huoltotapahtumat</h3>
-            <ul id="huoltoLista"></ul>
-        </section>
+                <h3>Huoltotapahtumat</h3>
+
+                <button id="clearAllBtn" type="button" class="btn btn-danger btn-sm mb-2">
+                    Tyhjennä kaikki merkinnät
+                </button>
+                <ul id="huoltoLista">
+
+                </ul>
+            </div>
         </section>
     </main>
 
@@ -73,7 +80,9 @@
         <p>&copy; 2025 Pyöränhuolto</p>
     </footer>
 
-<script src="huolto.js"></script>
- 
+    <script src="js/huolto.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.min.js"></script>
+    <script src="js/search.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

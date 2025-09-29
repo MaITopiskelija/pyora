@@ -2,19 +2,19 @@
 <html lang="fi">
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Huoltoliikkeet</title>
-     <link rel= "stylesheet" href="bootstrap.css">
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+     <link rel= "stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
     <style>
    
     </style>
 </head>
 <body>
-      <header>
-      <h1>Pyöränhuolto</h1>
-             <img src="images/kuvake2.png" alt="Kuvake" class="logo-img" />
+    <header>
+        <h1>Pyöränhuolto</h1>
+        <img src="images/kuvake2.png" alt="Kuvake" class="logo-img">
 
         <!-- Hampurilaisvalikon nappi -->
         <div class="menu-icon" id="menu-icon">
@@ -33,38 +33,43 @@
                 <li><a href="huoltopaivakirja.html">Huoltopäiväkirja</a></li>
                 <li><a href="huoltoliikkeet.html">Huoltoliikkeet</a></li>
                 <li><a href="pyorailyvinkit.html">Pyöräilyvinkit</a></li>
-               
             </ul>
+            <input type="text" id="searchbox" placeholder="Hae ongelma">
+            <div id="searchresults"></div>
         </nav>
     </header>
     
 
     <main>
         <section class="content">
-            <h2>Huoltoliikkeet</h2>
-            <p>Täältä löydät pyöränhuoltoliikkeitä kartalta. Voit lisätä myös oman liikkeesi!</p>
+            <h2 title="Liikkeet">Huoltoliikkeet</h2>
+            <p>
+                Täältä löydät pyöränhuoltoliikkeitä kartalta. Voit lisätä myös oman liikkeesi!
+            </p>
 
-            <div id="kartta" style="height: 280px;"></div>
+            <div id="kartta" style="height: 280px;">
+
+            </div>
 
             <h3>Lisää uusi huoltoliike</h3>
-<form id="liikeForm">
-  <label for="nimi">Liikkeen nimi tai osoite:</label>
-  <input type="text" id="nimi" list="ehdotukset" required />
+            <form id="liikeForm">
+                <label for="nimi">Liikkeen nimi tai osoite:</label>
+                <input type="text" id="nimi" list="ehdotukset" required />
 
-  <datalist id="ehdotukset">
-    <option value="Mikkelin Pyörähuolto">
-    <option value="Keskustan Pyöräkorjaamo">
-  </datalist>
+                <datalist id="ehdotukset">
+                    <option value="Mikkelin Pyörähuolto">
+                    <option value="Keskustan Pyöräkorjaamo">
+                </datalist>
 
-  <button type="submit" id="etsiButton">Etsi</button>
-  <button type="button" id="lisaaKartalleButton" disabled>Lisää kartalle</button>
-</form>
-
-<br>
+                <button type="submit" id="etsiButton">Etsi</button>
+                <button type="button" id="lisaaKartalleButton" disabled>Lisää kartalle</button>
+            </form><br>
 
             <h3>Lisätyt huoltoliikkeet</h3>
             <div id="liikeLista">
-                <ul id="liikeUl"></ul>
+                <ul id="liikeUl">
+                    
+                </ul>
             </div>
         </section>
     </main>
@@ -74,6 +79,9 @@
     </footer>
 
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-    <script src="huoltoliikkeet.js"></script>
+    <script src="js/huoltoliikkeet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.min.js"></script>
+    <script src="js/search.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
